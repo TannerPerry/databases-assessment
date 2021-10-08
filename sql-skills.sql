@@ -63,18 +63,27 @@
 -- JOIN customer c ON i.customer_id = c.customer_id;
 
 -- 3
--- SELECT c.first_name"customer first name", c.last_name "customer last name", e.employee_id "employee number",e.first_name "employee first name", e.last_name "employee last name"
+-- SELECT c.first_name "customer first name", c.last_name "customer last name", e.first_name "employee first name", e.last_name "employee last name"
 -- FROM customer c
 -- JOIN employee e ON c.support_rep_id = e.employee_id;
 
+-- 4
+-- select al.title, a.name
+-- from artist a
+-- join album al on al.artist_id = a.artist_id
+
+
 -- extra credit
+
 -- artist table 
 -- 1
 -- select * from artist
 -- order by name desc limit 10
+
 -- 2
 -- select * from artist
 -- where name like 'Black%'
+
 -- 3
 -- select * from artist
 -- where name like '%Black%'
@@ -83,6 +92,7 @@
 -- 1
 -- select * from employee
 -- Order by birth_date desc limit 1
+
 -- 2
 -- select * from employee
 -- Order by birth_date limit 1
@@ -91,6 +101,7 @@
 -- 1
 -- select count(*) from invoice
 -- WHERE billing_state in('CA','TX','AZ')
+
 -- 2
 -- select AVG(total) from invoice
 
@@ -101,12 +112,14 @@
 -- join playlist p
 -- on pt.playlist_id = p.playlist_id 
 -- where p.name = 'Music'
+
 -- 2
 -- Select t.name
 -- from playlist_track pt
 -- join track t
 -- on pt.track_id = t.track_id
 -- where pt.playlist_id = 5
+
 -- 3
 -- Select t.name "track name", p.name "playlist name"
 -- from playlist_track pt
@@ -114,11 +127,13 @@
 -- on pt.playlist_id = p.playlist_id 
 -- join track t
 -- on t.track_id = pt.track_id
--- where p.playlist_id = 5
+-- order by p.name
+-- I ordered by playlist name so the plylist names would be together
+
+
 -- 4
 -- SELECT track.name, album.title
 -- FROM track
 -- JOIN album ON album.album_id = track.album_id
 -- JOIN genre ON genre.genre_id = track.genre_id
-
 -- where genre.name = 'Alternative & Punk'
